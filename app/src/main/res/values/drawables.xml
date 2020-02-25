@@ -1,0 +1,6 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <item name="ic_menu_camera" type="drawable">@android:drawable/ic_menu_camera</item>
+    <!--<item name="ic_menu_cctv" type="drawable">@android:draw</item>
+    <item name="ic_menu_motor" type="drawable">@android:drawable/ic_menu_motor</item>
+-->
+</resources>
