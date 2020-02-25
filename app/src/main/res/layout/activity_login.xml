@@ -15,11 +15,12 @@
         android:layout_weight="707"
         android:orientation="vertical"
         android:weightSum="707">
+
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="492">
-        </FrameLayout>
+            android:layout_height="11dp"
+            android:layout_weight="492"></FrameLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -31,13 +32,15 @@
                 android:layout_height="match_parent"
                 android:layout_weight="345">
             </FrameLayout>
+
             <ImageView
                 android:id="@+id/logo"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="98dp"
                 android:layout_weight="748"
                 android:adjustViewBounds="true"
                 />
+
             <FrameLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"

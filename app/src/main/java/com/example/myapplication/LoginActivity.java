@@ -27,6 +27,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
+
         et_id = findViewById(R.id.LoginActivity_editText_id);
         et_pw = findViewById(R.id.LoginActivity_editText_pw);
         btn_login = findViewById(R.id.LoginActivity_button_login);
@@ -35,6 +37,9 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view){
+
+
+
                 final String userID = et_id.getText().toString();
                 String userPW = et_pw.getText().toString();
 

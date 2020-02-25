@@ -1,13 +1,20 @@
 package com.example.myapplication;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 
+import androidx.core.app.NotificationCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import com.android.volley.Response;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -30,6 +37,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "default");
+
+        builder.setSmallIcon(R.mipmap.ic_launcher);
+        builder.setContentTitle("알림 제목");
+        builder.setContentText("알람 세부 텍스트");
+
+        builder.setColor(Color.RED);
+        // 사용자가 탭을 클릭하면 자동 제거
+        builder.setAutoCancel(true);
+
+        // 알림 표시
+        NotificationManager notificationManager = (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            notificationManager.createNotificationChannel(new NotificationChannel("default", "기본 채널", NotificationManager.IMPORTANCE_DEFAULT));
+        }
+
+        // id값은
+        // 정의해야하는 각 알림의 고유한 int값
+        notificationManager.notify(1, builder.build());
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
